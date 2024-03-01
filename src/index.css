@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+.card {
+  background-color: rgb(19, 19, 19);
+  margin-right: 20px;
+}
+
+.header {
+  background-color: #15161a;
+}
+
+@media (max-width: 600px) {
+  .card {
+    margin-right: 19px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .text-content {
+    margin-top: 15px;
+  }
+}
+
+.blogs-img {
+  height: 310px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  box-shadow: 0, 2px, 3px, 1px, rgba(0, 0, 0, 0);
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.blogs-img > img {
+  height: 200px;
+  min-width: 100%;
+  object-fit: cover; /* Optional: This property specifies how the contents of the image are resized to fit its container */
+}
