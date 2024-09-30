@@ -19,7 +19,7 @@ function ResponsiveAppBar() {
   const movieAuth = useAppState();
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
-  
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -35,18 +35,18 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
-
-
-
   return (
     <AppBar
       sx={{ backgroundColor: "#15161a" }}
       position="sticky"
-      className="top-0 z-10 bg-red-400  border-b-2 border-gray-500"
-      
+      className="top-0 z-10 bg-red-400  border-b-2 border-gray-500 "
     >
-      <Container maxWidth="xl" >
-        <Toolbar disableGutters sx={{display: "flex", justifyContent: "space-between"}}>
+      <Container maxWidth="xl">
+        <Toolbar
+          disableGutters
+          sx={{ display: "flex", justifyContent: "space-between" }}
+          className="container max-auto"
+        >
           <Link to="/">
             <Typography
               // variant="h6"
@@ -120,7 +120,7 @@ function ResponsiveAppBar() {
                 <Tooltip title="Open settings">
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                     <Avatar
-                    sx={{height: "35px", width: "35px"}}
+                      sx={{ height: "35px", width: "35px" }}
                       alt="Remy Sharp"
                       src="/static/images/avatar/2.jpg"
                     />
@@ -144,11 +144,13 @@ function ResponsiveAppBar() {
                 >
                   <MenuItem onClick={handleCloseUserMenu}>
                     <Typography textAlign="center">
-                      <Typography variant="body2">{movieAuth.currentUser.displayName}</Typography>
+                      <Typography variant="body2">
+                        {movieAuth.currentUser.displayName}
+                      </Typography>
                     </Typography>
                   </MenuItem>
                   <MenuItem onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center" >
+                    <Typography textAlign="center">
                       <h3 onClick={() => movieAuth.Logout()}>LogOut</h3>
                     </Typography>
                   </MenuItem>

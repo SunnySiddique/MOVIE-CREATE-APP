@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import AddMovie from "./components/AddMovie";
 import Cards from "./components/Cards";
 import Detail from "./components/Detail";
@@ -11,7 +11,7 @@ import SignUp from "./components/SignUp";
 
 const App = () => {
   return (
-    <div className="App relative">
+    <div className="App relative ">
       {/* <Header /> */}
       <ResponsiveAppBar />
       <ToastContainer />

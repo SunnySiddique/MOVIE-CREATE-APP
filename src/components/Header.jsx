@@ -4,10 +4,8 @@ import { Link } from "react-router-dom";
 import { useAppState } from "../context/AppState";
 
 const Header = () => {
-
-
   // ********************************************** //
-  // this header not relatade this app 
+  // this header not relatade this app
   // ********************************************** //
 
   const movieAuth = useAppState();
@@ -15,7 +13,10 @@ const Header = () => {
 
   return (
     <>
-      <div className="sticky top-0 z-10 header flex justify-between items-center text-3xl text-red-500 font-bold p-3 border-b-2 border-gray-500">
+      <div
+        className="sticky top-0 z-10 header flex justify-between items-center text-3xl text-red-500 font-bold p-3 border-b-2 border-gray-500"
+        style={{ marginRight: "14px" }}
+      >
         <Link to="/">
           <span>
             Filmy
@@ -44,7 +45,7 @@ const Header = () => {
             <p>{movieAuth.currentUser.displayName}</p> */}
           </>
         ) : (
-          <Link to="/login" className="text-lg bg-green-500 cursor-pointer">
+          <Link to="/login" className="text-lg bg-green-500 cursor-pointer ">
             <Button>
               <span className="text-white font-medium capitalize">Login</span>
             </Button>
